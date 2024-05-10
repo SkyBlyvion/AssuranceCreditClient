@@ -1,8 +1,8 @@
-page 50015 "Assurance crédit client List"
+page 50015 "Customer Credit Insurance List"
 {
-    PageType = List;
+    PageType = ListPart;
     ApplicationArea = All;
-    SourceTable = "Assurance crédit client";
+    SourceTable = "Customer Credit Insurance";
     UsageCategory = Lists;
 
     layout
@@ -11,28 +11,34 @@ page 50015 "Assurance crédit client List"
         {
             repeater(Group)
             {
-                field("Code client"; "Code client")
+                field("Customer Code"; Rec."Customer Code")
                 {
+                    ToolTip = 'Specifies the value of the Customer Code field.';
                     ApplicationArea = All;
                 }
-                field(Date; Date)
+                field("Decision Date"; Rec."Decision Date")
                 {
+                    ToolTip = 'Specifies the value of the Decision Date field.';
                     ApplicationArea = All;
                 }
-                field("Code Décision organisme"; "Code Décision organisme")
+                field("Agency Decision Code"; Rec."Agency Decision Code")
                 {
+                    ToolTip = 'Specifies the value of the Agency Decision Code field.';
                     ApplicationArea = All;
                 }
-                field(Valeur; Valeur)
+                field("Amount"; Rec."Amount")
                 {
+                    ToolTip = 'Specifies the value of the Amount field.';
                     ApplicationArea = All;
                 }
-                field(Raison; Raison)
+                field("Reason"; Rec."Reason")
                 {
+                    ToolTip = 'Specifies the value of the Reason field.';
                     ApplicationArea = All;
                 }
-                field("N° dossier"; "N° dossier")
+                field("Case Number"; Rec."Case Number")
                 {
+                    ToolTip = 'Specifies the value of the Case Number field.';
                     ApplicationArea = All;
                 }
             }
