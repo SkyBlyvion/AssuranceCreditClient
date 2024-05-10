@@ -1,6 +1,6 @@
 table 50015 "Assurance Credit Client"
 {
-    DataClassification = ToBeClassified; // General classification for the table
+    DataClassification = CustomerContent; // General classification for the table
 
     fields
     {
@@ -25,7 +25,7 @@ table 50015 "Assurance Credit Client"
         {
             DataClassification = CustomerContent; // Assuming Reason includes customer-specific details
         }
-        field(6; "Case Number"; Text[12])
+        field(6; "N° Dossier"; Text[12])
         {
             DataClassification = CustomerContent; // Assuming this is a reference number relevant to the customer
         }
@@ -39,10 +39,5 @@ table 50015 "Assurance Credit Client"
         }
     }
 
-    fieldgroups
-    {
-        fieldgroup("DropDown"; "Code Client", "Date Assurance Credit", "Code Assurance Credit")
-        {
-        }
-    }
+
 }

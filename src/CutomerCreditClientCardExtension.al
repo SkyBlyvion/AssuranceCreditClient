@@ -1,6 +1,5 @@
 pageextension 50022 CustomerCardExtFacturation extends "Customer Card"
 {
-
     layout
     {
         addafter(Invoicing)
@@ -9,7 +8,6 @@ pageextension 50022 CustomerCardExtFacturation extends "Customer Card"
             {
                 field("Code Assurance Credit"; Rec."Code Assurance Credit")
                 {
-                    Caption = 'Code Assurance Credit';
                     ApplicationArea = All;
                 }
                 field("Date Assurance Credit"; Rec."Date Assurance Credit")

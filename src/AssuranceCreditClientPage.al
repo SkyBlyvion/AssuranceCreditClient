@@ -38,9 +38,9 @@ page 50015 "Assurance Credit Client Card"
                     ToolTip = 'Specifies the value of the Reason field.';
                     ApplicationArea = All;
                 }
-                field("Case Number"; Rec."Case Number")
+                field("N° Dossier"; Rec."N° Dossier")
                 {
-                    ToolTip = 'Specifies the value of the Case Number field.';
+                    ToolTip = 'Specifies the value of the N° Dossier field.';
                     ApplicationArea = All;
                 }
             }
