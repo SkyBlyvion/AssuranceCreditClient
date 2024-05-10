@@ -1,34 +1,36 @@
-page 50015 "Customer Credit Insurance List"
+page 50015 "Assurance Credit Client Card"
 {
-    PageType = ListPart;
+    PageType = CardPart;
     ApplicationArea = All;
-    SourceTable = "Customer Credit Insurance";
-    UsageCategory = Lists;
+    SourceTable = "Assurance Credit Client";
+    UsageCategory = Lists; // Make it a modal dialog
+    Editable = true; // Allow editing directly
 
     layout
     {
         area(content)
         {
-            repeater(Group)
+            group("General")
             {
-                field("Customer Code"; Rec."Customer Code")
+                field("Code Client"; Rec."Code Client")
                 {
-                    ToolTip = 'Specifies the value of the Customer Code field.';
+                    ToolTip = 'Specifies the value of the Code Client field.';
+                    ApplicationArea = All;
+                    Editable = false; // Typically not editable in modal
+                }
+                field("Date Assurance Credit"; Rec."Date Assurance Credit")
+                {
+                    ToolTip = 'Specifies the value of the Date Assurance Credit field.';
                     ApplicationArea = All;
                 }
-                field("Decision Date"; Rec."Decision Date")
+                field("Code Assurance Credit"; Rec."Code Assurance Credit")
                 {
-                    ToolTip = 'Specifies the value of the Decision Date field.';
+                    ToolTip = 'Specifies the value of the Code Assurance Credit field.';
                     ApplicationArea = All;
                 }
-                field("Agency Decision Code"; Rec."Agency Decision Code")
+                field("Valeur"; Rec."Valeur")
                 {
-                    ToolTip = 'Specifies the value of the Agency Decision Code field.';
-                    ApplicationArea = All;
-                }
-                field("Amount"; Rec."Amount")
-                {
-                    ToolTip = 'Specifies the value of the Amount field.';
+                    ToolTip = 'Specifies the value of the Valeur field.';
                     ApplicationArea = All;
                 }
                 field("Reason"; Rec."Reason")

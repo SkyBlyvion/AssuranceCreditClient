@@ -1,25 +1,25 @@
-table 50015 "Customer Credit Insurance"
+table 50015 "Assurance Credit Client"
 {
     DataClassification = ToBeClassified; // General classification for the table
 
     fields
     {
-        field(1; "Customer Code"; Code[20])
+        field(1; "Code Client"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Customer."No.";
         }
-        field(2; "Decision Date"; Date)
+        field(2; "Date Assurance Credit"; Date)
         {
             DataClassification = CustomerContent;
         }
-        field(3; "Agency Decision Code"; Code[10])
+        field(3; "Code Assurance Credit"; Code[10])
         {
             DataClassification = CustomerContent;
         }
-        field(4; "Amount"; Decimal)
+        field(4; "Valeur"; Decimal)
         {
-            DataClassification = CustomerContent; // Assuming Amount relates to customer transactions
+            DataClassification = CustomerContent; // Assuming Valeur relates to customer transactions
         }
         field(5; "Reason"; Text[50])
         {
@@ -33,7 +33,7 @@ table 50015 "Customer Credit Insurance"
 
     keys
     {
-        key(PK; "Customer Code", "Decision Date")
+        key(PK; "Code Client", "Date Assurance Credit")
         {
             Clustered = true;
         }
@@ -41,7 +41,7 @@ table 50015 "Customer Credit Insurance"
 
     fieldgroups
     {
-        fieldgroup("DropDown"; "Customer Code", "Decision Date", "Agency Decision Code")
+        fieldgroup("DropDown"; "Code Client", "Date Assurance Credit", "Code Assurance Credit")
         {
         }
     }
